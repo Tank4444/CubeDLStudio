@@ -3,8 +3,8 @@ import org.jetbrains.compose.desktop.application.dsl.TargetFormat
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
-    kotlin("multiplatform")
-    id("org.jetbrains.compose")
+    kotlin("multiplatform") version "1.7.20"
+    id("org.jetbrains.compose") version "1.2.0"
 }
 
 group = "ru.chuikov"
@@ -15,7 +15,15 @@ repositories {
     mavenCentral()
     maven("https://maven.pkg.jetbrains.space/public/p/compose/dev")
 }
+dependencies{
+    val DlVersion = "0.4.0"
+    commonMainImplementation("org.jetbrains.kotlinx:kotlin-deeplearning-api:${DlVersion}")
+    commonMainImplementation("org.jetbrains.kotlinx:kotlin-deeplearning-onnx:${DlVersion}")
+    commonMainImplementation("org.jetbrains.kotlinx:kotlin-deeplearning-visualization:${DlVersion}")
+    val decomposeVersion = "1.0.0-alpha-07"
+    commonMainRuntimeOnly("com.arkivanov.decompose:decompose:${decomposeVersion}")
 
+}
 
 kotlin {
     jvm {
