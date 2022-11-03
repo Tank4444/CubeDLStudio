@@ -1,4 +1,4 @@
-package components
+package screen.run_nn
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.material.Button
@@ -10,18 +10,11 @@ import ru.alexgladkov.odyssey.compose.extensions.push
 import ru.alexgladkov.odyssey.compose.local.LocalRootController
 
 @Composable
-fun first(){
+fun run_screen(){
     val rootController = LocalRootController.current
-    var count = remember { mutableStateOf(0) }
+
     Column {
-        Text(text = "First count " + count.value)
-        Button(onClick = {
-            count.value++;
-        }){
-            Text("Add first")
-        }
-        Button(onClick = {
-            rootController.push("second")
-        }){ Text("to second") }
+        Text(text = "run screen")
+
     }
 }

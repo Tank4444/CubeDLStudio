@@ -20,10 +20,14 @@ dependencies{
     commonMainImplementation("org.jetbrains.kotlinx:kotlin-deeplearning-api:${DlVersion}")
     commonMainImplementation("org.jetbrains.kotlinx:kotlin-deeplearning-onnx:${DlVersion}")
     commonMainImplementation("org.jetbrains.kotlinx:kotlin-deeplearning-visualization:${DlVersion}")
-    val decomposeVersion = "1.0.0-alpha-07"
-    commonMainRuntimeOnly("com.arkivanov.decompose:decompose:${decomposeVersion}")
-
+//    val decomposeVersion = "1.0.0-alpha-07"
+//    commonMainImplementation("com.arkivanov.decompose:decompose:${decomposeVersion}")
+//    commonMainImplementation("com.arkivanov.decompose:extensions-compose-jetbrains:${decomposeVersion}")
+    val odysseyVersion = "1.0.1"
+    commonMainImplementation("io.github.alexgladkov:odyssey-core:${odysseyVersion}") // For core classes
+    commonMainImplementation("io.github.alexgladkov:odyssey-compose:${odysseyVersion}") // For compose extensions
 }
+
 
 kotlin {
     jvm {
