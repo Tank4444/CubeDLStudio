@@ -1,7 +1,11 @@
 package navigation
 
+import BottomConfiguration
 import ru.alexgladkov.odyssey.compose.extensions.customNavigation
+import ru.alexgladkov.odyssey.compose.base.Navigator
+import ru.alexgladkov.odyssey.compose.extensions.*
 import ru.alexgladkov.odyssey.compose.navigation.RootComposeBuilder
+import screen.tab.TabScreen
 
 fun RootComposeBuilder.navigationGraph() {
     screen(NavigationTree.Actions.name) {
